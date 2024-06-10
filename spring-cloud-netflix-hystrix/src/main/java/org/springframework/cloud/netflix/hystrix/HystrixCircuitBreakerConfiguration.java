@@ -34,6 +34,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration(proxyBeanMethods = false)
 public class HystrixCircuitBreakerConfiguration {
 
+	/**
+	 * 初始化对应的切面配置，这个是hystrix的自带的一个东西，支持 @HystrixCommand 注解配置
+	 * @return
+	 */
 	@Bean
 	public HystrixCommandAspect hystrixCommandAspect() {
 		return new HystrixCommandAspect();
